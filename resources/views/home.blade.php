@@ -3,7 +3,9 @@
 @section('title')
 Home - Sebuah program ganteng
 @endsection
-
+@section('mhome')
+active
+@endsection
 @section('content')
 <div class="container">
     <div class="row">

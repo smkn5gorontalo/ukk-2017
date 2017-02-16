@@ -1,5 +1,7 @@
 @extends('layouts.app')
-
+@section('muser')
+active
+@endsection
 @section('content')
     <div class="container">
         <div class="row">
