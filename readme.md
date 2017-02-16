@@ -20,3 +20,6 @@ php artisan serve
 ```
 buka di browser http://localhost:8000
 
+Username/dan password
+- admin/123456 Untuk Level Admin
+* kasir1/123456 Untuk level Kasir
