@@ -94,7 +94,7 @@ return [
     | specify a specific custom language line for a given attribute rule.
     |
     */
-
+    'lebih_dari'=>'The :attribute must be greater than 0',
     'custom' => [
         'attribute-name' => [
             'rule-name' => 'custom-message',

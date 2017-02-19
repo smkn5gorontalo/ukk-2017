@@ -18,8 +18,8 @@ class CreateRelationsTable extends Migration
             $table->foreign('id_buku')->references('id')->on('bukus')->onDelete('cascade');
         });
         Schema::table('penjualans', function (Blueprint $table) {
-            $table->foreign('id_buku')->references('id')->on('bukus')->onDelete('restrict');
-            $table->foreign('id_user')->references('id')->on('users')->onDelete('restrict');
+            $table->foreign('id_buku')->references('id')->on('bukus')->onDelete('cascade');
+            $table->foreign('id_user')->references('id')->on('users')->onDelete('cascade');
         });
     }
 

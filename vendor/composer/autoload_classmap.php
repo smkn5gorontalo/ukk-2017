@@ -6,8 +6,12 @@ $vendorDir = dirname(dirname(__FILE__));
 $baseDir = dirname($vendorDir);
 
 return array(
-    'BuatTabelBarang' => $baseDir . '/database/migrations/2017_01_17_134901_buat_tabel_barang.php',
+    'CreateBukusTable' => $baseDir . '/database/migrations/2017_01_24_004425_create_bukus_table.php',
+    'CreateDistributorsTable' => $baseDir . '/database/migrations/2017_01_24_004102_create_distributors_table.php',
+    'CreatePasoksTable' => $baseDir . '/database/migrations/2017_01_24_004223_create_pasoks_table.php',
     'CreatePasswordResetsTable' => $baseDir . '/database/migrations/2014_10_12_100000_create_password_resets_table.php',
+    'CreatePenjualansTable' => $baseDir . '/database/migrations/2017_01_24_004527_create_penjualans_table.php',
+    'CreateRelationsTable' => $baseDir . '/database/migrations/2017_01_24_004910_create_relations_table.php',
     'CreateUsersTable' => $baseDir . '/database/migrations/2014_10_12_000000_create_users_table.php',
     'CrudGeneratorTest' => $vendorDir . '/appzcoder/crud-generator/tests/CrudGeneratorTest.php',
     'DatabaseSeeder' => $baseDir . '/database/seeds/DatabaseSeeder.php',
@@ -83,6 +87,7 @@ return array(
     'Hamcrest\\Util' => $vendorDir . '/hamcrest/hamcrest-php/hamcrest/Hamcrest/Util.php',
     'Hamcrest\\Xml\\HasXPath' => $vendorDir . '/hamcrest/hamcrest-php/hamcrest/Hamcrest/Xml/HasXPath.php',
     'Kernel' => $vendorDir . '/appzcoder/crud-generator/tests/Kernel.php',
+    'ModifikasiTabelPenjualans' => $baseDir . '/database/migrations/2017_02_18_011936_modifikasi_tabel_penjualans.php',
     'PHPUnit\\Framework\\Assert' => $vendorDir . '/phpunit/phpunit/src/ForwardCompatibility/Assert.php',
     'PHPUnit\\Framework\\BaseTestListener' => $vendorDir . '/phpunit/phpunit/src/ForwardCompatibility/BaseTestListener.php',
     'PHPUnit\\Framework\\TestCase' => $vendorDir . '/phpunit/phpunit/src/ForwardCompatibility/TestCase.php',
@@ -542,4 +547,6 @@ return array(
     'SebastianBergmann\\Version' => $vendorDir . '/sebastian/version/src/Version.php',
     'TestCase' => $baseDir . '/tests/TestCase.php',
     'Text_Template' => $vendorDir . '/phpunit/php-text-template/src/Template.php',
+    'UbahStokNullable' => $baseDir . '/database/migrations/2017_01_24_031734_ubah_stok_nullable.php',
+    'UsertableSeeder' => $baseDir . '/database/seeds/UsertableSeeder.php',
 );

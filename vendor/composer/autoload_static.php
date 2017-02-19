@@ -82,6 +82,9 @@ class ComposerStaticInitb29b6da217066a21229aff259037da77
         array (
             'Dotenv\\' => 7,
             'Doctrine\\Instantiator\\' => 22,
+            'Doctrine\\Common\\Cache\\' => 22,
+            'Doctrine\\Common\\Annotations\\' => 28,
+            'Doctrine\\Common\\' => 16,
             'DeepCopy\\' => 9,
         ),
         'C' => 
@@ -220,6 +223,18 @@ class ComposerStaticInitb29b6da217066a21229aff259037da77
         array (
             0 => __DIR__ . '/..' . '/doctrine/instantiator/src/Doctrine/Instantiator',
         ),
+        'Doctrine\\Common\\Cache\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/doctrine/cache/lib/Doctrine/Common/Cache',
+        ),
+        'Doctrine\\Common\\Annotations\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/doctrine/annotations/lib/Doctrine/Common/Annotations',
+        ),
+        'Doctrine\\Common\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/doctrine/common/lib/Doctrine/Common',
+        ),
         'DeepCopy\\' => 
         array (
             0 => __DIR__ . '/..' . '/myclabs/deep-copy/src/DeepCopy',
@@ -274,9 +289,21 @@ class ComposerStaticInitb29b6da217066a21229aff259037da77
         ),
         'D' => 
         array (
+            'Doctrine\\DBAL\\' => 
+            array (
+                0 => __DIR__ . '/..' . '/doctrine/dbal/lib',
+            ),
+            'Doctrine\\Common\\Lexer\\' => 
+            array (
+                0 => __DIR__ . '/..' . '/doctrine/lexer/lib',
+            ),
             'Doctrine\\Common\\Inflector\\' => 
             array (
                 0 => __DIR__ . '/..' . '/doctrine/inflector/lib',
+            ),
+            'Doctrine\\Common\\Collections\\' => 
+            array (
+                0 => __DIR__ . '/..' . '/doctrine/collections/lib',
             ),
         ),
         'C' => 
@@ -289,8 +316,12 @@ class ComposerStaticInitb29b6da217066a21229aff259037da77
     );
 
     public static $classMap = array (
-        'BuatTabelBarang' => __DIR__ . '/../..' . '/database/migrations/2017_01_17_134901_buat_tabel_barang.php',
+        'CreateBukusTable' => __DIR__ . '/../..' . '/database/migrations/2017_01_24_004425_create_bukus_table.php',
+        'CreateDistributorsTable' => __DIR__ . '/../..' . '/database/migrations/2017_01_24_004102_create_distributors_table.php',
+        'CreatePasoksTable' => __DIR__ . '/../..' . '/database/migrations/2017_01_24_004223_create_pasoks_table.php',
         'CreatePasswordResetsTable' => __DIR__ . '/../..' . '/database/migrations/2014_10_12_100000_create_password_resets_table.php',
+        'CreatePenjualansTable' => __DIR__ . '/../..' . '/database/migrations/2017_01_24_004527_create_penjualans_table.php',
+        'CreateRelationsTable' => __DIR__ . '/../..' . '/database/migrations/2017_01_24_004910_create_relations_table.php',
         'CreateUsersTable' => __DIR__ . '/../..' . '/database/migrations/2014_10_12_000000_create_users_table.php',
         'CrudGeneratorTest' => __DIR__ . '/..' . '/appzcoder/crud-generator/tests/CrudGeneratorTest.php',
         'DatabaseSeeder' => __DIR__ . '/../..' . '/database/seeds/DatabaseSeeder.php',
@@ -366,6 +397,7 @@ class ComposerStaticInitb29b6da217066a21229aff259037da77
         'Hamcrest\\Util' => __DIR__ . '/..' . '/hamcrest/hamcrest-php/hamcrest/Hamcrest/Util.php',
         'Hamcrest\\Xml\\HasXPath' => __DIR__ . '/..' . '/hamcrest/hamcrest-php/hamcrest/Hamcrest/Xml/HasXPath.php',
         'Kernel' => __DIR__ . '/..' . '/appzcoder/crud-generator/tests/Kernel.php',
+        'ModifikasiTabelPenjualans' => __DIR__ . '/../..' . '/database/migrations/2017_02_18_011936_modifikasi_tabel_penjualans.php',
         'PHPUnit\\Framework\\Assert' => __DIR__ . '/..' . '/phpunit/phpunit/src/ForwardCompatibility/Assert.php',
         'PHPUnit\\Framework\\BaseTestListener' => __DIR__ . '/..' . '/phpunit/phpunit/src/ForwardCompatibility/BaseTestListener.php',
         'PHPUnit\\Framework\\TestCase' => __DIR__ . '/..' . '/phpunit/phpunit/src/ForwardCompatibility/TestCase.php',
@@ -825,6 +857,8 @@ class ComposerStaticInitb29b6da217066a21229aff259037da77
         'SebastianBergmann\\Version' => __DIR__ . '/..' . '/sebastian/version/src/Version.php',
         'TestCase' => __DIR__ . '/../..' . '/tests/TestCase.php',
         'Text_Template' => __DIR__ . '/..' . '/phpunit/php-text-template/src/Template.php',
+        'UbahStokNullable' => __DIR__ . '/../..' . '/database/migrations/2017_01_24_031734_ubah_stok_nullable.php',
+        'UsertableSeeder' => __DIR__ . '/../..' . '/database/seeds/UsertableSeeder.php',
     );
 
     public static function getInitializer(ClassLoader $loader)

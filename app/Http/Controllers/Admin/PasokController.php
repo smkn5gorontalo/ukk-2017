@@ -46,10 +46,19 @@ class PasokController extends Controller
      */
     public function store(Request $request)
     {
-        
+        $this->validate($request, [
+            'id_distributor'=>"required",
+            'id_buku'=>"required",
+            'jumlah'=>"required|lebih_dari:0",
+            'tanggal'=>"required|date"
+            ]);
         $requestData = $request->all();
         
         Pasok::create($requestData);
+        //update stok buku
+        $buku           = Buku::find($request->id_buku);
+        $buku->stok     = $buku->stok+$request->jumlah;
+        $buku->save();
 
         Session::flash('flash_message', 'Pasok added!');
 
@@ -116,7 +125,11 @@ class PasokController extends Controller
      */
     public function destroy($id)
     {
-        Pasok::destroy($id);
+        $pasok      = Pasok::findOrFail($id);
+        $buku       = Buku::findOrFail($pasok->id_buku);
+        $buku->stok = $buku->stok - $pasok->jumlah;
+        $buku->save();
+        $pasok->delete();
 
         Session::flash('flash_message', 'Pasok deleted!');
 

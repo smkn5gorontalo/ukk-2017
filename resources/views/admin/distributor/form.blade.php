@@ -4,7 +4,17 @@
         {!! Form::text('nama_distributor', null, ['class' => 'form-control']) !!}
         {!! $errors->first('nama_distributor', '<p class="help-block">:message</p>') !!}
     </div>
-</div><div class="form-group {{ $errors->has('alamat') ? 'has-error' : ''}}">
+</div>
+@if (isset($submitButtonText))
+    <div class="form-group {{ $errors->has('nama_distributor') ? 'has-error' : ''}}">
+    {!! Form::label('nama_distributor', 'Nama Distributor', ['class' => 'col-md-4 control-label']) !!}
+    <div class="col-md-6">
+        {!! Form::text('nama_distributor', null, ['class' => 'form-control']) !!}
+        {!! $errors->first('nama_distributor', '<p class="help-block">:message</p>') !!}
+    </div>
+</div>
+@endif
+<div class="form-group {{ $errors->has('alamat') ? 'has-error' : ''}}">
     {!! Form::label('alamat', 'Alamat', ['class' => 'col-md-4 control-label']) !!}
     <div class="col-md-6">
         {!! Form::text('alamat', null, ['class' => 'form-control']) !!}

@@ -17,14 +17,14 @@ active
                             <table class="table table-borderless">
                                 <thead>
                                     <tr>
-                                        <th>ID</th><th> Judul </th><th> Noisbn </th><th> Penulis </th><th>Actions</th>
+                                        <th>ID</th><th> Judul </th><th> Noisbn </th><th> Stok </th><th>Actions</th>
                                     </tr>
                                 </thead>
                                 <tbody>
                                 @foreach($buku as $item)
                                     <tr>
                                         <td>{{ $item->id }}</td>
-                                        <td>{{ $item->judul }}</td><td>{{ $item->noisbn }}</td><td>{{ $item->penulis }}</td>
+                                        <td>{{ $item->judul }}</td><td>{{ $item->noisbn }}</td><td>{{ $item->stok }}</td>
                                         <td>
                                             <a href="{{ url('/admin/buku/' . $item->id) }}" class="btn btn-success btn-xs" title="View Buku"><span class="glyphicon glyphicon-eye-open" aria-hidden="true"/></a>
                                             <a href="{{ url('/admin/buku/' . $item->id . '/edit') }}" class="btn btn-primary btn-xs" title="Edit Buku"><span class="glyphicon glyphicon-pencil" aria-hidden="true"/></a>

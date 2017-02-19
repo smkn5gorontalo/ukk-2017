@@ -13,6 +13,7 @@ class CreateUsersTable extends Migration
      */
     public function up()
     {
+        DB::statement("SET foreign_key_checks=0");
         Schema::create('users', function (Blueprint $table) {
             $table->increments('id');
             $table->string('nama');

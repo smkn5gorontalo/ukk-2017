@@ -12,7 +12,7 @@
     <div class="col-md-6">
         {!! Form::select('id_buku', $bukus, null, ['class'=>'form-control','required'=>"required"]) !!}
         {!! $errors->first('id_buku', '<p class="help-block">:message</p>') !!}
-        @if (count($distributors)==0)
+        @if (count($bukus)==0)
             <p class="help-block">Belum ada data buku! <a href="{{ url('admin/buku/create') }}">Tambahkan</a> data buku terlebih dahulu</p>
         @endif
     </div>

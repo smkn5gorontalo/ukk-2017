@@ -12,7 +12,9 @@
 
     <!-- Styles -->
     <link href="/css/app.css" rel="stylesheet">
-
+    {!! Html::style('assets/plugins/bower_components/font-awesome/css/font-awesome.min.css') !!}
+    {!! Html::style('assets/plugins/bower_components/select2/dist/css/select2.min.css') !!}
+    {!! Html::style('assets/plugins/bower_components/select2-bootstrap-theme/dist/select2-bootstrap.min.css') !!}
     <!-- Scripts -->
     <script>
         window.Laravel = <?php echo json_encode([
@@ -45,25 +47,24 @@
                     <ul class="nav navbar-nav">
                         &nbsp;
                     </ul>
-                    @if (!Auth::guest())
+                    @if (Auth::check())
                         <ul class="nav navbar-nav">
                             <li class="@yield('mhome')"><a href="{{ url('admin/home') }}">Home </a></li>
+                            <li class="@yield('mpenjualan')"><a href="{{ url('admin/penjualan') }}">Penjualan</a></li>
                             @if (Auth::user()->akses=="admin")
                             <li class="@yield('muser')"><a href="{{ url('admin/user') }}">User</a></li>
                             <li class="@yield('mdistributor')"><a href="{{ url('admin/distributor') }}">Distributor</a></li>
                             <li class="@yield('mbuku')"><a href="{{ url('admin/buku') }}">Buku</a></li>
                             <li class="@yield('mpasok')"><a href="{{ url('admin/pasok') }}">Pasok</a></li>
+                            <li class="@yield('mlaporan')"><a href="{{ url('admin/laporan') }}">Laporan</a></li>
                             @endif
-                            <li class="@yield('mpenjualan')"><a href="{{ url('admin/penjualan') }}">Penjualan</a></li>
+                            
                         </ul>
                     @endif
                     <!-- Right Side Of Navbar -->
                     <ul class="nav navbar-nav navbar-right">
                         <!-- Authentication Links -->
-                        @if (Auth::guest())
-                            <li><a href="{{ url('/login') }}">Login</a></li>
-                            <li><a href="{{ url('/register') }}">Register</a></li>
-                        @else
+                        @if (Auth::check())
                             <li class="dropdown">
                                 <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
                                     {{ Auth::user()->nama }} <span class="caret"></span>
@@ -94,5 +95,10 @@
 
     <!-- Scripts -->
     <script src="/js/app.js"></script>
+    {!! Html::script('assets/plugins/bower_components/jquery/dist/jquery.min.js') !!}
+    {!! Html::script('assets/plugins/bower_components/select2/dist/js/select2.min.js') !!}
+
+    @yield('custom-scripts')
+
 </body>
 </html>
