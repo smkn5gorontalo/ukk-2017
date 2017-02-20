@@ -1,7 +1,7 @@
 #Project UKK 2017
 Ini Adalah project UKK web design RPL SMK Negeri 5 Gorontalo. 
 ##Cara Install
-Pertama buka command line dan clone datanya
+Pertama buka command prompt dan clone datanya
 ```
 git clone https://github.com/smkn5gorontalo/ukk-2017.git
 ```
