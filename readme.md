@@ -13,7 +13,7 @@ Run composer install di command prompt untuk menginstall semua plugin
 ```
 composer install
 ```
-Buat database baru dengan nama "penjualan_buku". kemudian ketikkan script berikut di command line
+Buka http://localhost/phpmyadmin trus buat database baru dengan nama "penjualan_buku". kemudian ketikkan script berikut di command line
 ```
 php artisan migrate --seed
 
