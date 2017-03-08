@@ -56,6 +56,7 @@
                             <li class="@yield('mdistributor')"><a href="{{ url('admin/distributor') }}">Distributor</a></li>
                             <li class="@yield('mbuku')"><a href="{{ url('admin/buku') }}">Buku</a></li>
                             <li class="@yield('mpasok')"><a href="{{ url('admin/pasok') }}">Pasok</a></li>
+                            <li class="@yield('mlaporan')"><a href="{{ url('admin/laporan') }}">Laporan</a></li>
                             {{-- <li class="@yield('mlaporan')"><a href="{{ url('admin/laporan') }}">Laporan</a></li> --}}
                             @endif
                             

@@ -21,6 +21,8 @@ Route::group(['middleware'=>'auth'], function(){
 		Route::get('penjualan/json/list-buku', 'Admin\\PenjualanController@listBuku');
 		Route::post('penjualan/confirm', 'Admin\\PenjualanController@confirm');
 		Route::resource('penjualan', 'Admin\\PenjualanController',['only'=>['index','store','destroy']]);
+		Route::post('laporan/generate','LaporanController@generate');
+		Route::get('laporan','LaporanController@index');
 	});
 });
 
